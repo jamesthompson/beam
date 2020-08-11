@@ -29,8 +29,8 @@ option go_package = "fnexecution_v1";
 option java_package = "org.apache.beam.model.fnexecution.v1";
 option java_outer_classname = "ProvisionApi";
 
-import "beam_runner_api.proto";
-import "endpoints.proto";
+import "model/pipeline/src/main/proto/beam_runner_api.proto";
+import "model/pipeline/src/main/proto/endpoints.proto";
 import "google/protobuf/struct.proto";
 
 // A service to provide runtime provisioning information to the SDK harness

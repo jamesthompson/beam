@@ -1,0 +1,30 @@
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
+package(default_visibility = ["//visibility:public"])
+
+proto_library(
+    name = "beam_fn_api_proto",
+    srcs = [
+        "beam_fn_api.proto",
+    ],
+    deps = [
+        "//model/pipeline/src/main/proto:beam_runner_api_proto",
+        "//model/pipeline/src/main/proto:endpoints_proto",
+        "//model/pipeline/src/main/proto:metrics_proto",
+        "@com_google_protobuf//:descriptor_proto",
+        "@com_google_protobuf//:duration_proto",
+        "@com_google_protobuf//:timestamp_proto",
+    ],
+)
+
+proto_library(
+    name = "beam_provision_api_proto",
+    srcs = [
+        "beam_provision_api.proto",
+    ],
+    deps = [
+        "//model/pipeline/src/main/proto:beam_runner_api_proto",
+        "//model/pipeline/src/main/proto:endpoints_proto",
+        "@com_google_protobuf//:struct_proto",
+    ],
+)

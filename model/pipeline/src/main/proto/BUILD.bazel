@@ -1,0 +1,62 @@
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
+package(default_visibility = ["//visibility:public"])
+
+proto_library(
+    name = "endpoints_proto",
+    srcs = [
+        "endpoints.proto",
+    ],
+)
+
+proto_library(
+    name = "beam_runner_api_proto",
+    srcs = [
+        "beam_runner_api.proto",
+    ],
+    deps = [
+        ":endpoints_proto",
+        "@com_google_protobuf//:descriptor_proto",
+    ],
+)
+
+proto_library(
+    name = "external_transforms_proto",
+    srcs = [
+        "external_transforms.proto",
+    ],
+    deps = [
+        ":beam_runner_api_proto",
+    ],
+)
+
+proto_library(
+    name = "metrics_proto",
+    srcs = [
+        "metrics.proto",
+    ],
+    deps = [
+        ":beam_runner_api_proto",
+        "@com_google_protobuf//:descriptor_proto",
+        "@com_google_protobuf//:timestamp_proto",
+    ],
+)
+
+proto_library(
+    name = "schema_proto",
+    srcs = [
+        "schema.proto",
+    ]
+)
+
+proto_library(
+    name = "standard_window_fns_proto",
+    srcs = [
+        "standard_window_fns.proto",
+    ],
+    deps = [
+        ":beam_runner_api_proto",
+        "@com_google_protobuf//:duration_proto",
+        "@com_google_protobuf//:timestamp_proto",
+    ],
+)

@@ -1,0 +1,13 @@
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
+package(default_visibility = ["//visibility:public"])
+
+proto_library(
+    name = "beam_interactive_api_proto",
+    srcs = [
+        "beam_interactive_api.proto",
+    ],
+    deps = [
+        "//model/pipeline/src/main/proto:beam_runner_api_proto",
+    ],
+)

@@ -29,10 +29,8 @@ option go_package = "pipeline_v1";
 option java_package = "org.apache.beam.model.pipeline.v1";
 option java_outer_classname = "RunnerApi";
 
-import "endpoints.proto";
-import "google/protobuf/any.proto";
+import "model/pipeline/src/main/proto/endpoints.proto";
 import "google/protobuf/descriptor.proto";
-import "google/protobuf/timestamp.proto";
 
 message BeamConstants {
   enum Constants {

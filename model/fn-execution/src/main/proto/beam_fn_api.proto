@@ -38,13 +38,12 @@ option go_package = "fnexecution_v1";
 option java_package = "org.apache.beam.model.fnexecution.v1";
 option java_outer_classname = "BeamFnApi";
 
-import "beam_runner_api.proto";
-import "endpoints.proto";
 import "google/protobuf/descriptor.proto";
-import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
-import "google/protobuf/wrappers.proto";
-import "metrics.proto";
+import "google/protobuf/timestamp.proto";
+import "model/pipeline/src/main/proto/beam_runner_api.proto";
+import "model/pipeline/src/main/proto/endpoints.proto";
+import "model/pipeline/src/main/proto/metrics.proto";
 
 // A descriptor for connecting to a remote port using the Beam Fn Data API.
 // Allows for communication between two environments (for example between the

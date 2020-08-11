@@ -29,7 +29,7 @@ option go_package = "jobmanagement_v1";
 option java_package = "org.apache.beam.model.jobmanagement.v1";
 option java_outer_classname = "ArtifactApi";
 
-import "beam_runner_api.proto";
+import "model/pipeline/src/main/proto/beam_runner_api.proto";
 
 // A service to retrieve artifacts for use in a Job.
 service ArtifactRetrievalService {

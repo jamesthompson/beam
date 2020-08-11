@@ -29,7 +29,7 @@ option go_package = "jobmanagement_v1";
 option java_package = "org.apache.beam.model.expansion.v1";
 option java_outer_classname = "ExpansionApi";
 
-import "beam_runner_api.proto";
+import "model/pipeline/src/main/proto/beam_runner_api.proto";
 
 message ExpansionRequest {
   // Set of components needed to interpret the transform, or which
